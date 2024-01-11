@@ -1,48 +1,25 @@
 import Image from "next/image";
-import astronaut from "../../assets/img/header-img.svg";
-import social1 from "../../assets/img/nav-icon1.svg";
-import social2 from "../../assets/img/nav-icon2.svg";
-import social3 from "../../assets/img/nav-icon3.svg";
+import Link from "next/link";
+import me from "../../assets/img/me.jpg";
 
 export const Hero = () => {
 	return (
-		<section className="grid gap-y-5 md:grid-cols-[52%_48%]  py-32">
-			<div className=" flex flex-col items-center md:items-start">
-				<div className="py-3 px-5 mb-4 !bg-gradient-pink inline-block border-gray-300 text-lg rounded-md border w-fit banner  font-bold tracking-widest ">
-					<p>Welcome to my portfolio</p>
-				</div>
-				<h1 className="font-sans text-4xl text-center md:text-start md:text-7xl mb-4 font-semibold">
-					{"Hi! i'm Albert a Web Developer"}
-				</h1>
-				<p className=" text-center md:text-start">
-					I am a programmer motivated by the idea of creating solutions that add value to society.
-				</p>
-				<ul className="flex items-center justify-between w-40 my-5">
-					<li className="social-icon">
-						<a href="   " className=" md:mr-2">
-							<Image src={social1} alt="" />
-						</a>
-					</li>
-					<li className=" social-icon">
-						<a href="" className="md:mr-2">
-							<Image src={social2} alt="" />
-						</a>
-					</li>
-					<li className="social-icon">
-						<a href="" className="md:mr-2">
-							<Image src={social3} alt="" />
-						</a>
-					</li>
-				</ul>
-				<div className="font-sans">
-					<button className="conectbtn py-3 px-4 border rounded-md">
-						<span>{"Let's Connect"}</span>
-					</button>
-				</div>
-			</div>
-			<figure className="animate-updown">
-				<Image src={astronaut} alt="" />
+		<section className="pb-5 md:mt-8 md:flex items-center md:gap-x-5 justify-between">
+			<figure className="rounded-full aspect-square w-11/12 mx-auto max-w-sm relative md:order-1 md:mx-0">
+				<Image fill src={me} alt="" className="rounded-full" />
 			</figure>
+			<article className="text-center mt-5 md:w-1/2 lg:w-3/4 md:text-left">
+				<h1 className="font-bold text-4xl lg:text-5xl">Hi, I&apos;m Albert Torres.</h1>
+				<p className="text-gray-color text-xl lg:text-2xl mt-3 mb-6">Software Engineer.</p>
+				<div className="grid grid-cols-[repeat(auto-fit,minmax(170px,1fr))] auto-rows-[60px] gap-8 max-w-lg mx-auto md:mx-0">
+					<Link href={""} className="bg-green-color flex items-center justify-center">
+						Download CV
+					</Link>
+					<Link href={""} className="border border-white flex items-center justify-center">
+						Learn More
+					</Link>
+				</div>
+			</article>
 		</section>
 	);
 };
