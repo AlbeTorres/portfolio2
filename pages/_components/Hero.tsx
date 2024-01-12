@@ -4,7 +4,7 @@ import me from "../../assets/img/me.jpg";
 
 export const Hero = () => {
 	return (
-		<section className="pb-5 md:mt-8 md:flex items-center md:gap-x-5 justify-between">
+		<section className="pt-8 pb-16 md:mt-8 md:flex items-center md:gap-x-5 justify-between">
 			<figure className="rounded-full aspect-square w-11/12 mx-auto max-w-sm relative md:order-1 md:mx-0">
 				<Image fill src={me} alt="" className="rounded-full" />
 			</figure>
