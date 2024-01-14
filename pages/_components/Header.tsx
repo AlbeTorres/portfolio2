@@ -27,7 +27,7 @@ export const Header = () => {
 			className={
 				scrolled
 					? `backdrop-blur-lg bg-neutral-100/80 shadow-lg sticky top-0 z-20 w-full`
-					: `sticky top-0 z-50 w-full`
+					: `sticky top-0 z-20 w-full`
 			}
 		>
 			<div className="flex items-center mx-auto justify-between w-11/12 md:w-4/5 h-14">
@@ -37,7 +37,12 @@ export const Header = () => {
 					</p>
 				</Link>
 
-				<Navbar anchors={anchors} visible={visible} handleMenu={() => setVisible(!visible)} />
+				<Navbar
+					anchors={anchors}
+					visible={visible}
+					scrolled={scrolled}
+					handleMenu={() => setVisible(!visible)}
+				/>
 			</div>
 		</header>
 	);
