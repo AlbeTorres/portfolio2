@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import me from "../../assets/img/me.jpg";
+import { Reveal } from "../../components/Reveal";
 
 export const Hero = () => {
 	return (
@@ -9,16 +10,24 @@ export const Hero = () => {
 				<Image fill src={me} alt="" className="rounded-full" />
 			</figure>
 			<article className="text-center mt-5 md:w-1/2 lg:w-3/4 md:text-left">
-				<h1 className="font-bold text-4xl lg:text-5xl">Hi, I&apos;m Albert Torres.</h1>
-				<p className="text-gray-color text-xl lg:text-2xl mt-3 mb-6">Software Engineer.</p>
-				<div className="grid grid-cols-[repeat(auto-fit,minmax(170px,1fr))] auto-rows-[60px] gap-8 max-w-lg mx-auto md:mx-0">
-					<Link href={""} className="bg-green-color flex items-center justify-center">
-						Download CV
-					</Link>
-					<Link href={""} className="border border-white flex items-center justify-center">
-						Learn More
-					</Link>
-				</div>
+				<Reveal width="w-fit">
+					<h1 className="font-bold text-4xl lg:text-5xl">Hi, I&apos;m Albert Torres.</h1>
+				</Reveal>
+				<Reveal width="w-fit">
+					<p className="text-gray-color text-xl lg:text-2xl mt-3 mb-6">Software Engineer.</p>
+				</Reveal>
+
+				<Reveal width="w-fit">
+					<div className="grid grid-cols-[repeat(auto-fit,minmax(170px,1fr))] auto-rows-[60px] gap-8 max-w-lg mx-auto md:mx-0">
+						<Link href={""} className="bg-green-color flex items-center justify-center">
+							Download CV
+						</Link>
+
+						<Link href={""} className="border border-white flex items-center justify-center">
+							Learn More
+						</Link>
+					</div>
+				</Reveal>
 			</article>
 		</section>
 	);

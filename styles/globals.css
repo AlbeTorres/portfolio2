@@ -14,3 +14,15 @@ body {
     clip-path: circle(150% at top right) ;
 }
 }
+
+#text-up{
+    animation: "fall ease";
+    animation-timeline: scroll();
+    animation-range: 0 500px
+}
+
+@keyframes fall {
+    0% { transform: 'translate(0%,-150%) skewX(0deg)' };
+	50% { transform: 'translate(0%,0%) skewX(-10deg)' };
+	100% { transform: 'translate(0%,150%) skewX(0deg)' }
+}
